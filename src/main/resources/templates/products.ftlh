@@ -8,7 +8,9 @@
 <hr>
 <h4>Товары со всей Украины</h4>
 <form action="/" method="get">
-    Поиск по названию объявления: <input type="text" name="title"><br>
+    Поиск по названию объявления: <label>
+        <input type="text" name="title">
+    </label><br>
     <input type="submit" value="Поиск">
 </form>
 <#list products as product>
@@ -21,11 +23,21 @@
 <hr>
 <h3>Создать новый товар</h3>
 <form action="/product/create" method="post" enctype="multipart/form-data">
-    Название объявления: <input type="text" name="title"/><br><br>
-    Описание товара: <input type="text" name="description"/><br><br>
-    Цена: <input type="number" name="price"/><br><br>
-    Город: <input type="text" name="city"/><br><br>
-    Имя: <input type="text" name="author"/><br><br>
+    Название объявления: <label>
+        <input type="text" name="title"/>
+    </label><br><br>
+    Описание товара: <label>
+        <input type="text" name="description"/>
+    </label><br><br>
+    Цена: <label>
+        <input type="number" name="price"/>
+    </label><br><br>
+    Город: <label>
+        <input type="text" name="city"/>
+    </label><br><br>
+    Имя: <label>
+        <input type="text" name="author"/>
+    </label><br><br>
     Первая фотография: <input type="file" name="file1"/><br><br>
     Вторая фотография: <input type="file" name="file2"/><br><br>
     Третья фотография: <input type="file" name="file3"/><br><br>
