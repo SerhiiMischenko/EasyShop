@@ -25,14 +25,18 @@ public class ProductController {
     }
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model) {
-        model.addAttribute("product", productService.getProductById(id));
+        Product product = productService.getProductById(id);
+        model.addAttribute("product", product);
+        model.addAttribute("images", product.getImages());
         return "product-info";
     }
 
     @PostMapping("/product/create")
     public String createProduct(
-            @RequestParam("file1") MultipartFile file1, @RequestParam("file1") MultipartFile file2,
-            @RequestParam("file1") MultipartFile file3,  Product product) throws IOException {
+            @RequestParam("file1") MultipartFile file1,
+            @RequestParam("file2") MultipartFile file2,
+            @RequestParam("file3") MultipartFile file3,
+            Product product) throws IOException {
         productService.saveProduct(product, file1, file2, file3);
         return "redirect:/";
     }

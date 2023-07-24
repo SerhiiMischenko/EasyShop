@@ -11,6 +11,12 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -30,11 +36,13 @@ public class ProductService {
         Image image1;
         Image image2;
         Image image3;
+
         if(file1.getSize() != 0) {
             image1 = toImageEntity(file1);
             image1.setPreviewImage(true);
             product.addImageToProduct(image1);
         }
+
         if(file2.getSize() != 0) {
             image2 = toImageEntity(file2);
             product.addImageToProduct(image2);
@@ -58,6 +66,14 @@ public class ProductService {
         image.setBytes(file.getBytes());
         return image;
     }
+
+    public byte[] compressImageToJPEG(MultipartFile file, float quality) throws IOException {
+        BufferedImage originalImage = ImageIO.read(file.getInputStream());
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ImageIO.write(originalImage, "jpeg", baos);
+        return baos.toByteArray();
+    }
+
 
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
