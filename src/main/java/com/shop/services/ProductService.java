@@ -40,9 +40,9 @@ public class ProductService {
     private Image toImageEntity (MultipartFile file) throws IOException {
         Image image = new Image();
         image.setName(file.getName());
-        image.setoriginalFileName | (file.getoriginatfFilename());
+        image.setOriginalFileName(file.getOriginalFilename());
         image.setContentType(file.getContentType());
-        image.setSize(file.getsize());
+        image.setSize(file.getSize());
         image.setBytes(file.getBytes());
         return image;
     }
