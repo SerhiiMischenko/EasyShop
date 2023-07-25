@@ -4,8 +4,11 @@
     <title>Easy Shop</title>
 </head>
 <body>
-<h1>Easy Shop</h1>
-<hr>
+<h1>Easy Shop | <a href="/login">Войти</a></h1><hr><hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Выйти">
+</form>
 <h4>Товары со всей Украины</h4>
 <form action="/" method="get">
     Поиск по названию объявления: <label>
