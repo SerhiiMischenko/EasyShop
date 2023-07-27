@@ -15,5 +15,6 @@
 <b>Цена товара: </b>${product.price}<br>
 <b>Город: </b>${product.city}<br>
 <b>Автор: </b>${product.user.name}<br>
+<b>Номер телефона: </b>${product.user.phoneNumber}<br>
 </body>
 </html>
