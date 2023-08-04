@@ -1,6 +1,6 @@
-package com.shop.models;
+package com.example.buysell.models;
 
-import com.shop.enums.Role;
+import com.example.buysell.models.enums.Role;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -63,10 +63,10 @@ public class User implements UserDetails {
         return true;
     }
 
-        @Override
-        public boolean isAccountNonLocked() {
-            return true;
-        }
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
 
     @Override
     public boolean isCredentialsNonExpired() {

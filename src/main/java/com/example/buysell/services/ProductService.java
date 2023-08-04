@@ -1,10 +1,10 @@
-package com.shop.services;
+package com.example.buysell.services;
 
-import com.shop.models.Image;
-import com.shop.models.Product;
-import com.shop.models.User;
-import com.shop.repositories.ProductRepository;
-import com.shop.repositories.UserRepository;
+import com.example.buysell.models.Image;
+import com.example.buysell.models.Product;
+import com.example.buysell.models.User;
+import com.example.buysell.repositories.ProductRepository;
+import com.example.buysell.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,12 +13,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
-
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-
 
 @Service
 @Slf4j

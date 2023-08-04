@@ -1,8 +1,8 @@
-package com.shop.controllers;
+package com.example.buysell.controllers;
 
-import com.shop.enums.Role;
-import com.shop.models.User;
-import com.shop.services.UserService;
+import com.example.buysell.models.User;
+import com.example.buysell.models.enums.Role;
+import com.example.buysell.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;

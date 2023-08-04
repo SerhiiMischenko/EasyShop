@@ -1,8 +1,8 @@
-package com.shop.services;
+package com.example.buysell.services;
 
-import com.shop.enums.Role;
-import com.shop.models.User;
-import com.shop.repositories.UserRepository;
+import com.example.buysell.models.User;
+import com.example.buysell.models.enums.Role;
+import com.example.buysell.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -27,7 +27,7 @@ public class UserService {
         if (userRepository.findByEmail(email) != null) return false;
         user.setActive(true);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.getRoles().add(Role.ROLE_USER);
+        user.getRoles().add(Role.ROLE_ADMIN);
         log.info("Saving new User with email: {}", email);
         userRepository.save(user);
         return true;
