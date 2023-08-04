@@ -62,10 +62,15 @@ public class UserService {
             }
         }
         userRepository.save(user);
+        log.info("Change role user with id = {}; role: {}", user.getId(), user.getRoles());
     }
 
     public User getUserByPrincipal(Principal principal) {
         if (principal == null) return new User();
         return userRepository.findByEmail(principal.getName());
+    }
+
+    public User getUserById(Long userId) {
+        return userRepository.findById(userId).orElse(null);
     }
 }
