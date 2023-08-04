@@ -1,10 +1,10 @@
-package com.example.buysell.services;
+package com.example.shop.services;
 
-import com.example.buysell.models.Image;
-import com.example.buysell.models.Product;
-import com.example.buysell.models.User;
-import com.example.buysell.repositories.ProductRepository;
-import com.example.buysell.repositories.UserRepository;
+import com.example.shop.models.Image;
+import com.example.shop.models.Product;
+import com.example.shop.models.User;
+import com.example.shop.repositories.ProductRepository;
+import com.example.shop.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

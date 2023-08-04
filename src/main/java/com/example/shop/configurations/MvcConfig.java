@@ -1,4 +1,4 @@
-package com.example.buysell.configurations;
+package com.example.shop.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

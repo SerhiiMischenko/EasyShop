@@ -7,9 +7,17 @@
                 <label for="searchCity">Город</label>
                 <select id="searchCity" class="form-control">
                     <option value="">Город не выбран</option>
-                    <option value="Москва">Москва</option>
-                    <option value="Красноярск">Красноярск</option>
-                    <option value="Казань">Казань</option>
+                    <option value="Киев">Киев</option>
+                    <option value="Одесса">Одесса</option>
+                    <option value="Харьков">Харьков</option>
+                    <option value="Львов">Львов</option>
+                    <option value="Днепр">Днепр</option>
+                    <option value="Черкассы">Черкассы</option>
+                    <option value="Донецк">Донецк</option>
+                    <option value="Суммы">Суммы</option>
+                    <option value="Ровно">Ровно</option>
+                    <option value="Тернороль">Тернороль</option>
+                    <option value="Луцк">Луцк</option>
                 </select>
             </div>
             <div class="form-group col-md-10">

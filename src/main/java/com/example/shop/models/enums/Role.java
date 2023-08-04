@@ -1,4 +1,4 @@
-package com.example.buysell.enums;
+package com.example.shop.models.enums;
 
 import org.springframework.security.core.GrantedAuthority;
 

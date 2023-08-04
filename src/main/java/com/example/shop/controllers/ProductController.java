@@ -1,8 +1,8 @@
-package com.example.buysell.controllers;
+package com.example.shop.controllers;
 
-import com.example.buysell.models.Product;
-import com.example.buysell.models.User;
-import com.example.buysell.services.ProductService;
+import com.example.shop.models.Product;
+import com.example.shop.models.User;
+import com.example.shop.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

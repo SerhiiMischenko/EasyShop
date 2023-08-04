@@ -1,6 +1,6 @@
-package com.example.buysell.configurations;
+package com.example.shop.configurations;
 
-import com.example.buysell.services.CustomUserDetailsService;
+import com.example.shop.services.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

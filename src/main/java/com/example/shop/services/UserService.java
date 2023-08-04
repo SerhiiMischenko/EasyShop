@@ -1,8 +1,8 @@
-package com.example.buysell.services;
+package com.example.shop.services;
 
-import com.example.buysell.models.User;
-import com.example.buysell.models.enums.Role;
-import com.example.buysell.repositories.UserRepository;
+import com.example.shop.models.User;
+import com.example.shop.models.enums.Role;
+import com.example.shop.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
