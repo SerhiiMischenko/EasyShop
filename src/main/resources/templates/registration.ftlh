@@ -13,11 +13,15 @@
         </div>
         <div class="form-group">
             <label for="phoneNumber">Номер телефона</label>
-            <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber">
+            <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber"
+                   pattern="\+[0-9]{12}" title="Введите номер телефона в формате +12345678901">
+            <small class="form-text text-muted">Пример: +12345678901</small>
         </div>
         <div class="form-group">
             <label for="password">Пароль</label>
-            <input type="password" class="form-control" id="password" required name="password">
+            <input type="password" class="form-control" id="password" required name="password"
+                   minlength="6">
+            <small class="form-text text-muted">Пароль должен быть длинее 6 символов</small>
         </div>
         <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit" style="width: 100%" class="btn btn-dark">Зарегистрироваться</button>
