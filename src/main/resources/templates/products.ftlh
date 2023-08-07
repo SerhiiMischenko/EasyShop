@@ -3,21 +3,10 @@
     <h1 style="text-align: center">Поиск товаров</h1><hr>
     <form method="get" action="/">
         <div class="form-row">
-            <div class="form-group col-md-2">
+            <div class="form-group">
                 <label for="searchCity">Город</label>
-                <select id="searchCity" class="form-control">
-                    <option value="">Город не выбран</option>
-                    <option value="Киев">Киев</option>
-                    <option value="Одесса">Одесса</option>
-                    <option value="Харьков">Харьков</option>
-                    <option value="Львов">Львов</option>
-                    <option value="Днепр">Днепр</option>
-                    <option value="Черкассы">Черкассы</option>
-                    <option value="Донецк">Донецк</option>
-                    <option value="Суммы">Суммы</option>
-                    <option value="Ровно">Ровно</option>
-                    <option value="Тернороль">Тернороль</option>
-                    <option value="Луцк">Луцк</option>
+                <select id="searchCity" required name="city" class="form-control">
+                    <#include "cities.ftlh">
                 </select>
             </div>
             <div class="form-group col-md-10">

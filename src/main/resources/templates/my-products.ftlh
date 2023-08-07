@@ -19,26 +19,14 @@
                 <div class="input-group mb-3">
                     <input type="number" required class="form-control" id="price" name="price">
                     <div class="input-group-append">
-                        <span class="input-group-text">₽</span>
+                        <span class="input-group-text">грн</span>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="searchCity">Город</label>
                 <select id="searchCity" required name="city" class="form-control">
-                    <option value="">Город не выбран</option>
-                    <option value="Киев">Киев</option>
-                    <option value="Одесса">Одесса</option>
-                    <option value="Харьков">Харьков</option>
-                    <option value="Львов">Львов</option>
-                    <option value="Днепр">Днепр</option>
-                    <option value="Черкассы">Черкассы</option>
-                    <option value="Донецк">Донецк</option>
-                    <option value="Суммы">Суммы</option>
-                    <option value="Ровно">Ровно</option>
-                    <option value="Тернороль">Тернороль</option>
-                    <option value="Луцк">Луцк</option>
-
+                    <#include "cities.ftlh">
                 </select>
             </div>
             <div class="form-group">
@@ -47,20 +35,20 @@
             </div>
             <div class="form-group">
                 <div class="custom-file">
-                    <input required type="file" name="file1" id="file1">
-                    <label class="custom-file-label" for="file1">Первая фотография к товару</label>
+                    <input required type="file" name="file1" id="file1" class="custom-file-input" accept=".jpg, .jpeg, .png, .gif">
+                    <label class="custom-file-label" for="file1" data-browse="Загрузить файл">Первая фотография к товару</label>
                 </div>
             </div>
             <div class="form-group">
                 <div class="custom-file">
-                    <input type="file" name="file2" id="file2">
-                    <label class="custom-file-label" for="file2">Вторая фотография к товару</label>
+                    <input type="file" name="file2" id="file2" class="custom-file-input" accept=".jpg, .jpeg, .png, .gif">
+                    <label class="custom-file-label" for="file2" data-browse="Загрузить файл">Вторая фотография к товару</label>
                 </div>
             </div>
             <div class="form-group">
                 <div class="custom-file">
-                    <input type="file" name="file3" id="file3">
-                    <label class="custom-file-label" for="file3">Третья фотография к товару</label>
+                    <input type="file" name="file3" id="file3" class="custom-file-input" accept=".jpg, .jpeg, .png, .gif">
+                    <label class="custom-file-label" for="file3" data-browse="Загрузить файл">Третья фотография к товару</label>
                 </div>
             </div>
             <input type="hidden" name="_csrf" value="${_csrf.token}"/>
@@ -84,7 +72,7 @@
                          class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.price} ₽</p>
+                        <p class="card-text">${product.price} грн</p>
                     </div>
                     <div class="card-footer">
                         ${product.city}
