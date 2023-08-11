@@ -1,9 +1,24 @@
-.product:hover {
-    transition: 0.5s;
-    transform: scale(1.02);
+.product-card {
+    height: 400px;
 }
 
-.product-link {
-    color: #000 !important;
-    text-decoration: none
+.card-img-container {
+    height: 60%;
+    overflow: hidden;
+}
+
+.card-img-container img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.product-card .card-body {
+    padding: 10px;
+}
+.product-link:hover,
+.product-link:hover .card-title,
+.product-link:hover .card-text,
+.product-link:hover .card-footer {
+    text-decoration: none;
 }
